@@ -1,0 +1,88 @@
+/* 计算机网络知识库自定义样式 */
+
+:root {
+  --md-primary-fg-color: #1565C0;
+  --md-accent-fg-color: #0D47A1;
+}
+
+/* 双语内容样式 */
+.bilingual-cn {
+  color: #1a237e;
+  border-left: 3px solid #1565C0;
+  padding-left: 12px;
+  margin: 8px 0;
+}
+
+.bilingual-en {
+  color: #546e7a;
+  border-left: 3px solid #90a4ae;
+  padding-left: 12px;
+  margin: 8px 0;
+  font-style: italic;
+}
+
+/* 代码块换行不滚动 */
+.md-typeset pre > code {
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 图片居中 */
+.md-typeset img {
+  display: block;
+  margin: 1em auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 100%;
+}
+
+/* 幻灯片分隔 */
+.slide-separator {
+  border-top: 2px dashed #bdbdbd;
+  margin: 2em 0;
+}
+
+/* 考点标记 */
+.key-point {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 8px 16px;
+  margin: 12px 0;
+  font-weight: bold;
+}
+
+/* 命令参考 */
+.cmd-ref {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  padding: 8px 16px;
+  margin: 12px 0;
+}
+
+/* 侧边栏章节折叠：Material主题对--section默认全展开，需覆盖 */
+.md-nav--primary .md-nav__item--section > .md-nav__toggle:not(:checked) ~ .md-nav {
+  display: grid !important;
+  grid-template-rows: minmax(0.4rem, 0fr) !important;
+  opacity: 0 !important;
+  visibility: collapse !important;
+}
+
+.md-nav--primary .md-nav__item--section > .md-nav__toggle:checked ~ .md-nav {
+  display: grid !important;
+  grid-template-rows: minmax(0.4rem, 1fr) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 表格增强 */
+.md-typeset table:not([class]) {
+  font-size: 0.85rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: #1565C0;
+  color: white;
+}
