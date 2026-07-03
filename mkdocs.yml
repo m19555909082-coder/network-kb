@@ -1,0 +1,136 @@
+site_name: 计算机网络知识点总结
+site_description: Computer Networks Knowledge Base - Bilingual (Chinese/English)
+site_author: 计算机网络课程
+copyright: Copyright &copy; 2025 计算机网络课程
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: 暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: 亮色模式
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+      separator: '[\s\-_.,:;!?()\[\]{}]+'
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 第1章 VLAN技术:
+    - ch01-vlan/index.md
+    - ch01-vlan/01-项目任务与vlan概念.md
+    - ch01-vlan/02-vlan配置命令access端口.md
+    - ch01-vlan/03-交换网络问题与vlan原理.md
+    - ch01-vlan/04-vlan特点与划分方式.md
+    - ch01-vlan/05-vlan-trunk与8021q.md
+    - ch01-vlan/06-vlan配置命令trunk端口.md
+    - ch01-vlan/07-native-vlan与tag-vlan.md
+    - ch01-vlan/08-svi三层交换与vlan间通信.md
+    - ch01-vlan/09-vlan删除与堆叠vlan.md
+  - 第2章 扩展办公网络:
+    - ch02-network-expansion/index.md
+    - ch02-network-expansion/01-网络扩展与层次化设计.md
+    - ch02-network-expansion/02-核心层汇聚层接入层.md
+    - ch02-network-expansion/03-交换机级联技术.md
+    - ch02-network-expansion/04-交换机堆叠技术.md
+    - ch02-network-expansion/05-链路聚合技术.md
+    - ch02-network-expansion/06-生成树协议stp.md
+    - ch02-network-expansion/07-vlan间通信与三层交换.md
+    - ch02-network-expansion/08-单臂路由配置.md
+  - 第3章 子网与路由:
+    - ch03-subnet-routing/index.md
+    - ch03-subnet-routing/01-项目任务与子网连通.md
+    - ch03-subnet-routing/02-路由基础知识.md
+    - ch03-subnet-routing/03-认识路由器设备.md
+    - ch03-subnet-routing/04-路由器基本配置.md
+    - ch03-subnet-routing/05-路由器配置模式.md
+    - ch03-subnet-routing/06-接口配置与直连路由.md
+    - ch03-subnet-routing/07-静态路由配置.md
+    - ch03-subnet-routing/08-默认路由与路由汇总.md
+    - ch03-subnet-routing/09-单臂路由vlan间通信.md
+  - 第4章 构建园区网络:
+    - ch04-campus-network/index.md
+    - ch04-campus-network/01-园区网络基础与规划.md
+    - ch04-campus-network/02-ip地址规划与子网划分.md
+    - ch04-campus-network/03-直连路由.md
+    - ch04-campus-network/04-静态路由配置.md
+    - ch04-campus-network/05-默认路由.md
+    - ch04-campus-network/06-rip路由协议.md
+    - ch04-campus-network/07-ospf路由协议.md
+  - 第5章 访问控制列表(ACL):
+    - ch05-acl/index.md
+    - ch05-acl/01-acl概述与工作原理.md
+    - ch05-acl/02-通配符掩码.md
+    - ch05-acl/03-标准acl配置.md
+    - ch05-acl/04-扩展acl配置.md
+    - ch05-acl/05-命名acl.md
+    - ch05-acl/06-acl放置规则与综合应用.md
+  - 第6章 网络地址转换(NAT):
+    - ch06-nat/index.md
+    - ch06-nat/01-nat概述与地址类型.md
+    - ch06-nat/02-静态nat配置.md
+    - ch06-nat/03-动态nat配置.md
+    - ch06-nat/04-pat端口地址转换.md
+    - ch06-nat/05-nat负载均衡.md
+    - ch06-nat/06-nat与路由综合.md
+  - 第7章 网络工程设计:
+    - ch07-network-design/index.md
+    - ch07-network-design/01-课程介绍与地位.md
+    - ch07-network-design/02-网络工程基本概念.md
+    - ch07-network-design/03-系统集成方法.md
+    - ch07-network-design/04-网络系统层次模型.md
+    - ch07-network-design/05-网络需求分析.md
+    - ch07-network-design/06-结构化布线与机房设计.md
+    - ch07-network-design/07-网络安全与维护测试.md
+  - 实验报告:
+    - experiments/index.md
+  - 复习大纲: review-outline.md
+  - 网络工程概述: network-engineering-overview.md
+  - 图片集: image-gallery.md
